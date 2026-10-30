@@ -1,0 +1,42 @@
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #182230;
+  background: #f3f6fb;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.container { width: min(850px, calc(100% - 32px)); margin: 42px auto; }
+header { margin-bottom: 24px; }
+.eyebrow { color: #3859c7; font-weight: 800; letter-spacing: .13em; font-size: .75rem; }
+h1 { margin: 8px 0; font-size: clamp(2rem, 5vw, 2.8rem); }
+.subtitle, .help { color: #667085; line-height: 1.55; }
+.panel { background: white; border: 1px solid #e1e7f0; border-radius: 16px; padding: 22px; margin: 16px 0; box-shadow: 0 5px 20px #1b2c4b0a; }
+h2 { margin: 0 0 10px; font-size: 1.2rem; }
+.inline { display: flex; gap: 10px; align-items: center; margin-top: 12px; }
+input[type="text"], input[type="file"] { width: 100%; min-width: 0; padding: 12px; border: 1px solid #cfd7e4; border-radius: 9px; background: white; font: inherit; }
+label { display: block; margin: 12px 0 6px; font-weight: 600; }
+button { border: 0; border-radius: 9px; background: #3156c8; color: white; padding: 12px 16px; font: inherit; font-weight: 700; cursor: pointer; white-space: nowrap; }
+button:hover { background: #2444a8; }
+button:disabled { opacity: .55; cursor: wait; }
+.status { color: #475467; font-size: .94rem; }
+.answer { margin-top: 14px; padding: 14px; border-radius: 10px; background: #f1f5ff; line-height: 1.6; overflow-wrap: anywhere; }
+.quiz { margin-top: 16px; }
+.quiz-question { padding: 14px 0; border-bottom: 1px solid #e5eaf2; }
+.quiz-question p { margin: 0 0 8px; }
+.quiz-question input { margin-top: 6px; }
+.hidden { display: none; }
+footer { text-align: center; color: #7a8495; font-size: .85rem; padding: 18px 0 30px; }
+@media (max-width: 600px) {
+  .container { margin-top: 24px; }
+  .panel { padding: 17px; }
+  .inline { align-items: stretch; flex-direction: column; }
+  button { width: 100%; }
+}
+.source-note { margin-top: 12px; padding-top: 10px; border-top: 1px solid #d7e0f5; color: #475467; font-size: .92rem; }
+.method-note { color: #7a8495; font-size: .8rem; }
+.quiz-question { min-width: 0; border: 0; border-bottom: 1px solid #e5eaf2; padding: 16px 0; margin: 0; }
+.quiz-question legend { font-weight: 700; line-height: 1.5; padding: 0; margin-bottom: 10px; }
+.option-label { display: flex; align-items: flex-start; gap: 8px; margin: 9px 0; padding: 10px; border: 1px solid #e1e7f0; border-radius: 8px; font-weight: 400; cursor: pointer; }
+.option-label input { margin-top: 4px; }
+.review-correct { color: #167447; }
+.review-wrong { color: #b42318; }

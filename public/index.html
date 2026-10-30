@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Notes Chatbot</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">STUDY SMARTER</p>
+      <h1>Student Notes Chatbot</h1>
+      <p class="subtitle">Upload your notes, ask questions, and practise with multiple-choice quizzes.</p>
+    </header>
+
+    <section class="panel">
+      <h2>1. Upload notes</h2>
+      <p class="help">Upload a <code>.txt</code> file or a text-based <code>.pdf</code> file. Scanned PDFs need OCR first.</p>
+      <div class="inline">
+        <input id="notesFile" type="file" accept=".txt,.pdf,text/plain,application/pdf">
+        <button id="uploadBtn">Upload notes</button>
+      </div>
+      <p id="uploadStatus" class="status" aria-live="polite">No notes uploaded yet.</p>
+    </section>
+
+    <section class="panel">
+      <h2>2. Ask a question</h2>
+      <p class="help">Ask about your uploaded notes. Answers are based on the text found in your PDF or TXT file.</p>
+      <div class="inline">
+        <input id="questionInput" type="text" placeholder="Example: What is a polygon?" autocomplete="off">
+        <button id="askBtn">Ask</button>
+      </div>
+      <div id="answerBox" class="answer hidden" aria-live="polite"></div>
+    </section>
+
+    <section class="panel">
+      <h2>3. Quiz and revision</h2>
+      <p class="help">Generate up to five multiple-choice questions with four options, then check your score and review explanations.</p>
+      <button id="quizBtn">Generate quiz</button>
+      <form id="quizForm" class="quiz hidden">
+        <div id="quizQuestions"></div>
+        <button type="submit">Check answers</button>
+      </form>
+      <div id="quizResult" class="answer hidden" aria-live="polite"></div>
+    </section>
+
+    <footer>Answers and quiz questions are retrieved or generated from your uploaded notes. The app does not use a generative AI model, so verify important answers against the source document. PDF text is extracted in your browser before it is sent to this local app.</footer>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

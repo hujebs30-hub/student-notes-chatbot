@@ -1,0 +1,6 @@
+Java is an object oriented programming language.
+A class is a blueprint for creating objects.
+An object is an instance of a class.
+Inheritance allows one class to acquire properties from another class.
+Encapsulation combines data and methods into a single unit.
+Polymorphism allows one interface to have multiple forms.
